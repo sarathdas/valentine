@@ -38,7 +38,7 @@ export class AppComponent {
   }
 
   onYesClick() {
-    this.question = "Yay! Happy Valentine's Day! 💖";
+    this.question = 'Yay! Knew You would say Yes!!! UMMA 💖';
     this.showFinalGif = true;
   }
 }

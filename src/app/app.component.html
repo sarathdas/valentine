@@ -1,0 +1,32 @@
+<div class="container text-center valentine-theme">
+  <h1>{{ question }}</h1>
+
+  <div *ngIf="!showFinalGif" class="mt-3">
+    <img [src]="gifUrl" alt="Valentine GIF" class="gif-img" />
+  </div>
+
+  <div class="buttons mt-4" *ngIf="!showFinalGif">
+    <button
+      class="btn btn-success"
+      [ngStyle]="{ 'font-size.px': yesSize }"
+      (click)="onYesClick()"
+    >
+      Yes
+    </button>
+    <button
+      *ngIf="yesSize < 560"
+      class="btn btn-danger ms-3"
+      (click)="onNoClick()"
+    >
+      {{ noResponses[currentNoIndex] }}
+    </button>
+  </div>
+
+  <div *ngIf="showFinalGif" class="mt-3">
+    <img
+      src="https://i.pinimg.com/originals/52/47/1e/52471e5ee4d2c953127091efac41de23.gif"
+      alt="Happy GIF"
+      class="gif-img"
+    />
+  </div>
+</div>
